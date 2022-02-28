@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+   font-family: "Poppins", sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   transition: all 0.5s ease-in-out;
+   scroll-behavior: smooth;
+}
+
+a {
+   text-decoration: none;
+   color: #000;
+}
+
+li {
+   content: none;
+   margin: 25px 25px 10px 25px;
+   width: 100%vw;
+   height: 100%vh;
+   font-size: 1.5rem;
+   cursor: pointer;
+   padding: 10px;
+   line-height: 25px;
+   transition: all 0.4s ease-in-out;
+   list-style: none;
+   /* list-style-type: lower-alpha; */
+}
+
+li:hover {
+   color: #f00;
+   border-radius: 10px;
+   box-shadow: 5px 5px 15px 5px #000000;
+
+   transform: translateY(-5px) scale(0.98);
+}
+
+body .root {
+   display: flex;
+   justify-content: center;
+   margin: 10px;
+   padding: 10px;
+   width: 90%vw;
+   background: #f00;
+}
+
+img {
+   width: 250px;
+   height: 250px;
+   border-radius: 5px;
+}
+
+ul {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+body .root .contenedorGif {
+   margin-top: 50px;
+   height: 100%;
+   width: 90%vh;
+   padding: 10px;
+   margin: 10px;
+   align-items: center;
+   background: #fff;
+   border-radius: 5px;
+   padding: 10px;
+}
+
+body .root .contenedorGif h1 {
+   position: sticky;
+
+   top: 0;
+   width: 90%vw;
+   background: #ffffff;
+   padding: 15px;
+   /* backdrop-filter: blur(20px); */
+   z-index: 100000;
+   margin: 20px;
+   text-align: center;
+}
+
+body .root .contenedorGif h1::before {
+   content: "";
+   position: absolute;
+   top: 55px;
+   height: 2px;
+   width: 130px;
+   background: #f00;
+}
+
+body .root .contenedorGif h1 .fa-plus {
+   margin-left: 20px;
+   font-size: 1.6rem;
+   cursor: pointer;
+   transition: all 0.5s ease-in-out;
+}
+
+body .root .contenedorGif h1 .fa-plus:hover {
+   transform: rotate(90deg) scale(1.1);
+}
+.fa-moon {
+   position: absolute;
+   top: 0;
+
+   font-size: 1rem;
+}
+.modoNocturno {
+   background: #000 !important;
+}
+.translate {
+   transform: translateX(110px) scaleX(-1);
+}
+.h1 {
+   color: #fff !important;
+   background: #000 !important;
+}
+.slipeUp {
+   position: sticky;
+   display: flex;
+   justify-content: end;
+   margin: 10px 45px 10px 0;
+}
+.info {
+   position: absolute;
+   opacity: 1;
+   font-size: 0.6rem;
+   background: chocolate;
+   padding: 5px;
+   width: 70px;
+   border-radius: 2px;
+   right: 10px;
+   bottom: -60px;
+   letter-spacing: 1px;
+   font-weight: 500;
+   z-index: 10000;
+   opacity: 0;
+}
+.slipeUpEnlace .info:hover {
+   opacity: 1;
+   animation: info 0.5s;
+}
+@keyframes info {
+   0%,
+   100% {
+      transform: scaleX(1);
+   }
+   50% {
+      transform: translateX(10px);
+   }
+}
+.slipeUpEnlace {
+   margin-right: 50px;
+}
+.circle {
+   margin: 10px;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background: #f00;
+   opacity: 1;
+   z-index: 1;
+   animation: circleUno 4s linear infinite;
+}
+
+@keyframes circleUno {
+   0%,
+   100% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0.8;
+   }
+}
+.circle2 {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background: #f00;
+   opacity: 0.4;
+   z-index: 2;
+   animation: circleDos 2s linear infinite;
+}
+@keyframes circleDos {
+   0%,
+   100% {
+      opacity: 0.8;
+   }
+   50% {
+      opacity: 0.4;
+   }
+}
+.circle3 {
+   position: absolute;
+
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   background: #f00;
+   opacity: 0.2;
+   z-index: 3;
+   animation: circleTres 3s linear infinite;
+}
+@keyframes circleTres {
+   0%,
+   100% {
+      opacity: 0.6;
+   }
+   50% {
+      opacity: 0.2;
+   }
+}
+.fa-arrow-circle-up {
+   font-size: 2rem;
+   animation: animate 3s linear infinite;
+   opacity: 1;
+}
+@keyframes animate {
+   50% {
+      transform: scale(1.2);
+   }
+   75% {
+      scale: (0.9);
+   }
+}
+
+@media (max-width: 1200px) {
+   ul {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (max-width: 992px) {
+   ul {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 767px) {
+   ul {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+@media (max-width: 650px) {
+   ul {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
